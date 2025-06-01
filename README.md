@@ -3,7 +3,18 @@
 [![Version](https://img.shields.io/badge/version-2.3-green.svg?style=flat-square)](https://github.com/GeoppGmbH/Geopp-SSRZ-Python-Demo/releases/tag/v2.3)
 [![Reference](https://img.shields.io/badge/reference-SSRZ-blue.svg?style=flat-square)](https://www.geopp.de/SSRZ/)
 
-## Geo++ SSRZ Python Demonstrator
+## Geo++ SSRZ Python Demonstrator Modified for thesis work
+
+Fork Specifics
+==================
+This version contain the following changes compared to the source:
+- Expanded signal specific caluclations in the SSI
+- Increase in size of the generated OSR to all signals for 
+	each satellite
+
+This work was done in connection with my master thesis work, any 
+future use of this code is subject to the license under which the 
+original work was created. 
 
 Disclaimer
 ==================

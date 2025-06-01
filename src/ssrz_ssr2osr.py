@@ -171,9 +171,13 @@ class ssr2osr:
                     if len(sat_list) == 0:
                         continue
                     gnss = sat_list[0][0]
+                    ## edit
+                    # signals for the fidderent satelites
+                    signals = md.md_gr.md_block.lr_md_block.pb_signals_blk.signals
                     # find the corresponding high rate timing block and
                     # satellite group
                     n_g_h = md.sat_gr.sat_md_blk.n_g_hr
+                    print(md.md_gr.md_block.lr_md_block.pb_signals_blk.signals)
                     for hh in range(n_g_h):
                         if gnss in md.sat_gr.sat_md_blk.hr_block[hh].gnss:
                             hr_sat_gr_idx = hh
@@ -222,6 +226,12 @@ class ssr2osr:
                         self.az[ii].append([])
                         self.gsi_ppo[ii].append([])
                         self.rsi_ppo[ii].append([])
+
+
+                        print(gnss,sat)
+                        sig_list = signals.get(sat[0])
+                        print(sig_list)
+
                         #######################################################
                         # Orbit/Clock/Bias
                         #######################################################

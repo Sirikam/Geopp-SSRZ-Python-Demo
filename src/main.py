@@ -72,12 +72,51 @@ full_path = os.path.realpath(__file__)
 current_dir = os.path.dirname(full_path)
 PATH = os.path.join(current_dir, '..', 'test_data')
 os.chdir(PATH)
-SSRZ_FILE = 'FRA1060i.ssz'
-NAV_FILE = "BRDC00IGS_R_20230600000_01D_MN.rnx"
 OUT_FOLDER = None
-LAT = 52.5
-LON = 9.5
-HEIGHT = 100.0
+
+# testdata
+#SSRZ_FILE = 'FRA1060i.ssz'
+#NAV_FILE = "BRDC00IGS_R_20230600000_01D_MN.rnx"
+#LAT = 52.5
+#LON = 9.5
+#HEIGHT = 100.0
+
+# Oslo
+#SSRZ_FILE = 'HYPOS_SSRZ_SOER_0812-12-13.ssz'
+#NAV_FILE = 'BRDC00IGS_R_20243430000_01D_MN.rnx'
+#LAT = 59.5
+#LON = 10.4
+#HEIGHT = 40
+
+# trom
+#SSRZ_FILE = 'HYPOS_SSRZ_NORD_11-12.ssz'
+#NAV_FILE = 'BRDC00IGS_R_20242960000_01D_MN.rnx'
+#LAT = 69.4
+#LON = 18.5
+#HEIGHT = 40
+
+#hanc
+#SSRZ_FILE = 'HYPOS_SSRZ_NORD_11-12.ssz'
+#NAV_FILE = 'BRDC00IGS_R_20242960000_01D_MN.rnx'
+#LAT = 69.84382
+#LON = 19.62615
+#HEIGHT = 50
+
+#somm
+#SSRZ_FILE = 'HYPOS_SSRZ_NORD_11-12.ssz'
+#NAV_FILE = 'BRDC00IGS_R_20242960000_01D_MN.rnx'
+#LAT = 69.63763
+#LON = 18.00415
+#HEIGHT = 41.7
+
+#tro
+SSRZ_FILE = 'HYPOS_SSRZ_nord260525-18-19.ssz'
+NAV_FILE = 'BRDC00IGS_R_20251460000_01D_MN.rnx'
+LAT = 69.66272
+LON = 18.93964
+HEIGHT = 138.1
+
+
 # Date-time settings
 GPSWEEK_START = 0
 SOW_START = 0
@@ -106,8 +145,10 @@ ZERO_TIDE = True
 #                                Call
 # =============================================================================
 [ssr, ssi] = do_ssrz_demo.ssrz_demo(SSRZ_FILE, [LAT, LON, HEIGHT], NAV_FILE,
-                                    DECODE_ONLY, OUT_FOLDER,
+                                    DECODE_ONLY,
+                                    OUT_FOLDER,
                                     GPSWEEK_START, SOW_START,
                                     GPSWEEK_END, SOW_END, do_not_use_msg,
                                     do_not_use_gnss, print_ssi_after_msg,
                                     CSV_OUT, DO_SED, ZERO_TIDE)
+

@@ -45,6 +45,7 @@ import ssrz_decoder
 import space_time_trafo as trafo
 import ssrz_ssr
 import ssrz_ssr2osr
+import ssrz_ssr2osr_edit
 import nav_rinex_reader as nav_reader
 
 
@@ -338,7 +339,7 @@ def ssrz_demo(ssrz_file:str, user_llh:list, nav_file:str=None,
                                         p_ssi = False
                                         break
                                 if p_ssi:
-                                    osr = ssrz_ssr2osr.ssr2osr(
+                                    osr = ssrz_ssr2osr_edit.ssr2osr(
                                         ssr.corrections[-1], dec_md, week,
                                         epoch, nav_data, receiver,
                                         gvi_out, ssi_dbg, do_not_use_gnss,
